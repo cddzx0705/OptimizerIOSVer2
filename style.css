@@ -3,7 +3,10 @@
 .contact{
 margin-top:25px;
 }
-
+select{
+outline:none;
+font-size:14px;
+}
 .contact h3{
 margin-bottom:10px;
 }
