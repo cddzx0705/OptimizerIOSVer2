@@ -61,7 +61,50 @@ setInterval(async()=>{
  setTimeout(()=>t.remove(),2000);
 }
 /* ===== FAKE OPTIMIZER CODE ===== */
+function runCode(title){
 
+const box = document.getElementById("codeBox");
+const text = document.getElementById("codeText");
+
+box.style.display="block";
+
+let lines = [
+"[SYSTEM] Detect device...",
+"[SYSTEM] Applying device profile...",
+"[SYSTEM] CPU Optimization...",
+"[SYSTEM] GPU Optimization...",
+"[SYSTEM] RAM Clean...",
+"[SYSTEM] Sensitivity Patch...",
+"[SYSTEM] Regedit Applied...",
+"[SYSTEM] FPS Boost Enabled...",
+"[SUCCESS] Device optimized successfully"
+];
+
+let i=0;
+
+text.innerHTML="";
+
+let interval = setInterval(()=>{
+
+text.innerHTML += lines[i]+"\n";
+
+text.scrollTop = text.scrollHeight;
+
+i++;
+
+if(i>=lines.length){
+
+clearInterval(interval);
+
+setTimeout(()=>{
+box.style.display="none";
+},2000);
+
+}
+
+},400);
+
+}
 function runCode(type){
 
 const box = document.getElementById("codeBox");
@@ -123,3 +166,4 @@ setTimeout(typeLine,400);
 
 typeLine();
 }
+
